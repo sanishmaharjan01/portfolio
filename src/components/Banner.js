@@ -45,7 +45,7 @@ export const Banner =() => {
                     <Col xs={12} md={6} xl={7}>
                     <span className="tagline">Welcome to my Portfolio</span>
                     <h1>Hi I'm Sanish Maharjan <span className="wrap">{text}</span></h1>
-                    <p>I’m a final-year BCA student passionate about building a career in tech, with a strong interest in front-end development and quality assurance.<br></br> I’m obligated to continuously polish my skills and stay updated with industry trends.<br></br> Eager to learn and take on real-world challenges, I approach every task with curiosity, responsibility, and a drive to improve</p>
+                    <p>I’m a final-year BCA student with a growing passion for front-end development and UI/UX design.<br></br>Currently honing my skills in React.js, I enjoy building clean, user-focused interfaces. <br></br> I aspire to lead tech teams as a project manager one day, so I’m actively improving not only my coding ability but also my collaboration and problem-solving skills.<br></br> I’m eager to contribute to dynamic environments where learning and innovation go hand in hand. </p>
                     <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size ={25}/></button>
                     </Col>
                     
