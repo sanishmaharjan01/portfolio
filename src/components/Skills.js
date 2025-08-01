@@ -1,62 +1,96 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
+import { FaStar, FaStarHalfAlt, FaRegStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 export const Skills = () => {
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
   };
+
+  const skills = [
+    {
+      title: "HTML5",
+      rating: 4,
+      description: "Experienced in writing semantic HTML5 code for structured, accessible web pages."
+    },
+    {
+      title: "CSS3",
+      rating: 4,
+      description: "Skilled in modern layouts, animations, Flexbox, and responsive design using CSS3."
+    },
+    {
+      title: "React.js",
+      rating: 2.5,
+      description: "Learning React.js to build scalable and dynamic single-page applications with components."
+    },
+    {
+      title: "JavaScript",
+      rating: 3,
+      description: "Good understanding of ES6 features and DOM manipulation for interactive web apps."
+    }
+  ];
+
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return (
+      <div className="stars">
+        {[...Array(fullStars)].map((_, i) => <FaStar key={`full-${i}`} color="#ffc107" />)}
+        {hasHalfStar && <FaStarHalfAlt key="half" color="#ffc107" />}
+        {[...Array(emptyStars)].map((_, i) => <FaRegStar key={`empty-${i}`} color="#ffc107" />)}
+      </div>
+    );
+  };
+
+  const CustomLeftArrow = ({ onClick }) => (
+    <button type="button" className="custom-arrow left" onClick={onClick}>
+      <FaChevronLeft size={30} color="#ccc" />
+    </button>
+  );
+
+  const CustomRightArrow = ({ onClick }) => (
+    <button type="button" className="custom-arrow right" onClick={onClick}>
+      <FaChevronRight size={30} color="#ccc" />
+    </button>
+  );
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>I specialize in front-end development with strong skills in HTML5 and CSS3 for building responsive, accessible layouts..<br></br>My JavaScript expertise allows me to create dynamic, interactive web experiences using modern ES6+ features.<br></br>I work confidently with React.js to build scalable, component-based applications. Together, these technologies form the core of my ability to craft clean, user-focused web solutions.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>HTML 5</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>CSS 3</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>React.js</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>JavaScript </h5>
-                            </div>
-                        </Carousel>
-                    </div>
-                </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>
+                I focus on crafting clean, functional, and visually engaging web interfaces.
+                My growing skill set helps me bring both structure and creativity to every project.
+              </p>
+
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                arrows={true}
+                customLeftArrow={<CustomLeftArrow />}
+                customRightArrow={<CustomRightArrow />}
+                className="owl-carousel owl-theme skill-slider"
+              >
+                {skills.map((skill, index) => (
+                  <div key={index} className="item">
+                    <h5>{skill.title}</h5>
+                    <p>{skill.description}</p>
+                    {renderStars(skill.rating)}
+                  </div>
+                ))}
+              </Carousel>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-  )
-}
+  );
+};

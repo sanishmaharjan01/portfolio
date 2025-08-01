@@ -16,7 +16,7 @@ export const Banner =() => {
         },delta)
 
         return () => { clearInterval(ticker)};
-    },[text])
+    },[text])   
 
     const tick =() => {
         let i = loopNum % toRotate.length;
@@ -44,7 +44,7 @@ export const Banner =() => {
                 <Row className="align-items-center" >
                     <Col xs={12} md={6} xl={7}>
                     <span className="tagline">Welcome to my Portfolio</span>
-                    <h1>Hi I'm Sanish Maharjan <span className="wrap">{text}</span></h1>
+                    <h1>Hi I'm Sanish Maharjan <br></br><span className="wrap">{text}</span></h1>
                     <p>I’m a final-year BCA student with a growing passion for front-end development and UI/UX design.<br></br>Currently honing my skills in React.js, I enjoy building clean, user-focused interfaces. <br></br> I aspire to lead tech teams as a project manager one day, so I’m actively improving not only my coding ability but also my collaboration and problem-solving skills.<br></br> I’m eager to contribute to dynamic environments where learning and innovation go hand in hand. </p>
                     <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size ={25}/></button>
                     </Col>
