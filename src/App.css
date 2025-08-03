@@ -277,6 +277,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   top: 7px;
 }
 
+@media (min-width: 992px) {
+  /* Use navbar-flex-wrapper instead of navbar-collapse */
+  .navbar-flex-wrapper {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Push nav links right next to logo */
+  .navbar-flex-wrapper .nav-center {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    gap: 16px;
+  }
+
+  /* Remove margin-left from navbar-text so it stays on far right */
+  .navbar-flex-wrapper .navbar-text {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+
 /* Responsive Layout */
 @media (max-width: 991px) {
 /* Ultra-smooth hamburger menu slide & fade */
@@ -351,7 +378,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 /************ Banner Css ************/
 .banner {
   position: relative;
-  min-height: 100vh;         /* Full screen height */
+  min-height: 100vh;   
   display: flex;
   align-items: center;
   padding-top: 180px;
@@ -440,13 +467,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-  .banner {
-    padding-top: 80px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   .banner h1 {
     font-size: 36px;
     line-height: 1.3;

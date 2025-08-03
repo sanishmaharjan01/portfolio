@@ -44,36 +44,38 @@ export const NavBar = () => {
                 </Navbar.Toggle>
 
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <div className="navbar-flex-wrapper">
+                        <Nav className="nav-center">
                         <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
                         <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
                         <Nav.Link href="#project" className={activeLink === 'project' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('project')}>Projects</Nav.Link>
-                    </Nav>
-                    <span className="navbar-text">
+                        </Nav>
+                        <span className="navbar-text">
                         <div className="social-icon">
                             <a href="https://www.linkedin.com/in/sanish-maharjan-9b663a294/" target="_blank" rel="noopener noreferrer">
-                                <img src={navIcon1} alt="" />
+                            <img src={navIcon1} alt="" />
                             </a>
                             <a href="https://www.facebook.com/sanishmhzrn958" target="_blank" rel="noopener noreferrer">
-                                <img src={navIcon2} alt="" />
+                            <img src={navIcon2} alt="" />
                             </a>
                             <a href="https://www.instagram.com/theuserispotato_0.o/" target="_blank" rel="noopener noreferrer">
-                                <img src={navIcon3} alt="" />
+                            <img src={navIcon3} alt="" />
                             </a>
                         </div>
-                            <button
-                                className="vvd"
-                                onClick={() => {
-                                    const section = document.getElementById('contact');
-                                    if (section) {
-                                    section.scrollIntoView({ behavior: 'smooth' });
-                                    setExpanded(false);
-                                    }
-                                }}
-                                >
-                                <span>let's connect</span>
-                             </button>
-                    </span>
+                        <button
+                            className="vvd"
+                            onClick={() => {
+                            const section = document.getElementById('contact');
+                            if (section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                                setExpanded(false);
+                            }
+                            }}
+                        >
+                            <span>let's connect</span>
+                        </button>
+                        </span>
+                    </div>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
