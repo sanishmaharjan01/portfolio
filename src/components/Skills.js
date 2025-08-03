@@ -67,7 +67,7 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                I focus on crafting clean, functional, and visually engaging web interfaces.
+                I focus on crafting clean, functional, and visually engaging web interfaces.<br></br>
                 My growing skill set helps me bring both structure and creativity to every project.
               </p>
 
