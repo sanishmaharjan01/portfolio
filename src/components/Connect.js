@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const Connect = () => {
@@ -40,16 +39,50 @@ const Connect = () => {
 
   return (
     <form className="connect-form" onSubmit={handleSubmit}>
-    <div className="connect-row">
-        <input type="text" name="firstName" placeholder="FirstName" className="connect-input" />
-        <input type="text" name="lastName" placeholder="LastName" className="connect-input" />
-    </div>
-    <div className="connect-row">
-        <input type="email" name="email" placeholder="Email" className="connect-input" />
-        <input type="tel" name="phone" placeholder="Phone" className="connect-input" />
-    </div>
-    <textarea name="message" placeholder="Your message" className="connect-textarea" />
-    <button type="submit" className="connect-button">{status}</button>
+      <div className="connect-row">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="FirstName"
+          className="connect-input"
+          value={formData.firstName}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="LastName"
+          className="connect-input"
+          value={formData.lastName}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="connect-row">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="connect-input"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+          className="connect-input"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+      </div>
+      <textarea
+        name="message"
+        placeholder="Your message"
+        className="connect-textarea"
+        value={formData.message}
+        onChange={handleChange}
+      />
+      <button type="submit" className="connect-button">{status}</button>
     </form>
   );
 };
