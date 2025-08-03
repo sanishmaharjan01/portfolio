@@ -293,7 +293,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   pointer-events: auto;
 }
 
-
   .navbar-nav {
     flex-direction: row !important;
     justify-content: center;
@@ -310,6 +309,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
     width: 100%;
     margin-top: 0px;
   }
+
+    .social-icon a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon a::before {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon a img {
+    width: 16px;
+  }
+
+  .navbar-text button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
 
   .vvd {
     padding: 8px 18px;
@@ -337,6 +356,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   align-items: center;
   padding-top: 180px;
   padding-bottom: 80px;
+  padding-left: 60px;
+  padding-right: 60px;
   background-image: url('./assets/img/banner-bg.png');
   background-position: top center;
   background-size: cover;
@@ -354,28 +375,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(79, 89, 198, 0.5) -5.91%, rgba(125, 105, 212, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;  
   display: inline-block;
-  color: white; /* Keep tagline text white for contrast */
+  color: white;
 }
-
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
-  color: #ffffff; /* White text */
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Shadow for readability */
-  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  margin-bottom: 12px;  
+  letter-spacing: 0.8px;
 }
 
 .banner p {
-  color: #EAEAEA ;
+  color: #EAEAEA;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  width: 96%;
+  max-width: 600px;     
+  margin-bottom: 12px;  
 }
 
 .txt-rotate > .wrap {
@@ -387,19 +408,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 15px;      
+  margin-bottom: 15px;   
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
-  background: #3182ce; /* Vibrant blue background */
+  background: #3182ce;
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
   transition: all 0.3s ease;
 }
-
 .banner button:hover {
-  background: #2c5282; /* Darker blue on hover */
+  background: #2c5282; 
 }
 
 .banner button svg {
@@ -420,8 +441,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .banner {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .banner h1 {
@@ -581,17 +604,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .contact-section {
   display: flex;
   justify-content: center;
+  background: linear-gradient(to right, #232526, #414345);
   align-items: center;
-  background: linear-gradient(to right, #a1328b, #5026b9);
-  padding: 80px 40px;
+  padding: 40px 40px;
   flex-wrap: wrap;
   gap: 40px;
 }
 
 /* Left Side Image */
 .contact-left img {
-  max-width: 450px;
+  max-width: 600px;
   width: 100%;
+  padding-right: 110px;
 }
 
 /* Right Side Form Container */
@@ -632,13 +656,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   width: 100%;
   outline: none;
   font-weight: 600;
-  color: black;
+  color: rgb(27, 27, 27);
 }
 
 .connect-textarea {
   resize: none;
   height: 200px;
-  background: linear-gradient(to right, #843cbb, #5731bc);
   color: white;
   font-weight: 600;
 }
@@ -656,6 +679,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 .connect-button:hover {
   background-color: #ddd;
+}
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 24px;
+  }
+
+  .contact-left img {
+    padding-right: 0;     /* Remove large right padding */
+    max-width: 100%;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;     /* Reduce heading size */
+    text-align: center;
+  }
+
+  .connect-form {
+    gap: 16px;
+  }
+
+  .connect-row {
+    flex-direction: column;   /* Stack fields vertically */
+    gap: 12px;
+  }
+
+  .connect-button {
+    align-self: center;       /* Center the button */
+    width: 100%;              /* Optional: make button full width */
+    text-align: center;
+  }
 }
 
 
