@@ -6,7 +6,6 @@ import { Skills } from './components/Skills';
 import Contact from './components/Contact';
 import { Footer } from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ImOpera } from 'react-icons/im';
 
 function App() {
   return (

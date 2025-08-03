@@ -682,7 +682,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .connect-textarea {
   resize: none;
   height: 200px;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
 }
 
