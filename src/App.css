@@ -576,6 +576,90 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   opacity: 0.2;
 }
 
+/**Connect CSS**/
+/* Contact Section Layout */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #a1328b, #5026b9);
+  padding: 80px 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* Left Side Image */
+.contact-left img {
+  max-width: 450px;
+  width: 100%;
+}
+
+/* Right Side Form Container */
+.contact-right {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Title */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: white;
+}
+
+/* Form Styling */
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.connect-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.connect-input,
+.connect-textarea {
+  background-color: #e8f0fe;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 24px;
+  width: 100%;
+  outline: none;
+  font-weight: 600;
+  color: black;
+}
+
+.connect-textarea {
+  resize: none;
+  height: 200px;
+  background: linear-gradient(to right, #843cbb, #5731bc);
+  color: white;
+  font-weight: 600;
+}
+
+.connect-button {
+  padding: 16px 32px;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.connect-button:hover {
+  background-color: #ddd;
+}
+
+
+
 /*** Footer ***/
 .footer {
   background-color: #0c0c0c; /* darker than before */

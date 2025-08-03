@@ -26,7 +26,7 @@ export const NavBar = () => {
 
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
-        setExpanded(false); // auto-close on link click
+        setExpanded(false); 
     }
 
     return (
@@ -61,7 +61,18 @@ export const NavBar = () => {
                                 <img src={navIcon3} alt="" />
                             </a>
                         </div>
-                        <button className="vvd" onClick={() => console.log('connect')}><span>let's connect</span></button>
+                            <button
+                                className="vvd"
+                                onClick={() => {
+                                    const section = document.getElementById('contact');
+                                    if (section) {
+                                    section.scrollIntoView({ behavior: 'smooth' });
+                                    setExpanded(false);
+                                    }
+                                }}
+                                >
+                                <span>let's connect</span>
+                             </button>
                     </span>
                 </Navbar.Collapse>
             </Container>
