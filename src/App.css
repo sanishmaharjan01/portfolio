@@ -689,6 +689,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 .connect-button {
   padding: 16px 32px;
   background-color: white;
+  color: #1a202c;
   border: none;
   border-radius: 12px;
   font-weight: bold;
