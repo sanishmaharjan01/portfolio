@@ -31,12 +31,13 @@ export const NavBar = () => {
     return (
         <Navbar expand="lg" expanded={expanded} className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Toggle
+               <Navbar.Toggle
                     aria-controls="basic-navbar-nav"
                     onClick={() => setExpanded(prev => !prev)}
-                >
+                    className="ms-auto"  // <-- Add this line
+                    >
                     {expanded ? <X size={28} color="white" /> : <List size={28} color="white" />}
-                </Navbar.Toggle>
+                    </Navbar.Toggle>
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <div className="navbar-flex-wrapper">
