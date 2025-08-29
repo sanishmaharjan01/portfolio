@@ -792,13 +792,81 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 
 /*** Project CSS***/
 .project-section {
+  background: #151515; /* Black background */
+  color: #fff;      /* White text */
   padding: 60px 0;
-  background-color: #f9f9f9; /* optional */
 }
-.project-section h2 {
+.project-section .section-subtitle {
+  color: #fff !important;
+}
+/* Card Styles */
+.project-section .card {
+  border: none;
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Hover shadow + slight lift */
+.project-section .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Card image hover zoom */
+.project-section .card img {
+  transition: transform 0.4s ease;
+}
+
+.project-section .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card body spacing */
+.project-section .card-body {
+  padding: 1.5rem;
+}
+
+/* Card Title */
+.project-section .card-title {
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 0.75rem;
 }
+
+/* Card Text */
+.project-section .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Tech Stack Tags */
+.project-section .badge.bg-light {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 50px;
+}
+
+/* Featured + Badge position */
+.project-section .badge {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 12px;
+}
+
+/* Button Styling */
+.project-section .btn-dark {
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.project-section .btn-dark:hover {
+  background: #333;
+}
+
 
 
 
