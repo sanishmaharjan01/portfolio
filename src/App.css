@@ -797,7 +797,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   padding: 60px 0;
 }
 .project-section .section-subtitle {
-  color: #fff !important;
+  color: #c7c7c7 !important;
 }
 /* Card Styles */
 .project-section .card {
