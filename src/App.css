@@ -790,6 +790,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
   }
 }
 
+/*** Project CSS***/
+.project-section {
+  padding: 60px 0;
+  background-color: #f9f9f9; /* optional */
+}
+.project-section h2 {
+  font-weight: 600;
+  margin-bottom: 40px;
+}
 
 
 
